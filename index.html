@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e1e1e">
+    <meta name="description" content="Un pequeño vínculo hecho con música.">
+    <title>vinculo</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="escenario">
+
+        <!-- Imagen de fondo configurada en styles.css -->
+        <div class="fondo-overlay" aria-hidden="true"></div>
+
+        <button id="btn-iniciar" class="btn-iniciar" type="button">
+            Reproducir ♡
+        </button>
+
+        <!-- Mensajes de estado (por ejemplo, si el audio no puede sonar) -->
+        <p id="estado" class="estado oculto" role="status" aria-live="polite"></p>
+
+        <audio id="musica" preload="auto">
+            <source src="assets/audio/vinculo.mp3" type="audio/mpeg">
+            Tu navegador no admite la reproducción de audio.
+        </audio>
+
+        <!-- Ventana retro -->
+        <section id="ventana" class="ventana oculto"
+                 aria-label="Ventana de Vínculo">
+
+            <header class="ventana-header">
+                <span id="titulo-ventana">Vínculo</span>
+
+                <button id="btn-cerrar" class="btn-cerrar"
+                        type="button" aria-label="Cerrar ventana">
+                    ×
+                </button>
+            </header>
+
+            <div class="ventana-body">
+                <img
+                    id="gif"
+                    class="gif"
+                    src="assets/gifs/escena.gif"
+                    alt="Animación de Vínculo"
+                >
+
+                <div class="texto-contenedor">
+                    <div class="emojis" aria-hidden="true">Te Amo</div>
+
+                    <p id="texto-letra" aria-live="polite">Si...</p>
+                </div>
+            </div>
+
+            <footer class="ventana-footer">
+                <button id="btn-ok" class="btn-ok" type="button">
+                    OK
+                </button>
+
+                <button id="btn-reiniciar" class="btn-ok oculto" type="button">
+                    Volver a escuchar
+                </button>
+            </footer>
+        </section>
+
+        <p class="firma">Hecho por noviecito
+        </p>
+    </main>
+</body>
+</html>
